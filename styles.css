@@ -16,7 +16,7 @@ body {
 
 /* Títulos */
 .titulo {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
     color: #1A1A1A;
@@ -25,107 +25,118 @@ body {
 /* Asistente virtual */
 .asistente-box {
     margin: 20px auto 25px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
     background: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
 }
 
-.asistente-box img {
+/* Tamaño EXACTO original */
+.asistente-box img,
+.assistant-image {
     width: 80px;
-    margin-bottom: 10px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 14px;
 }
 
 .asistente-texto {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #444;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-/* Menú de botones */
+/* Botones accesibles */
 .menu {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
 }
 
-.btn {
+/* ---- Alturas accesibles para botones ---- */
+
+/* Mitad → más altos */
+.btn-mitad {
+    flex: 1 1 calc(50% - 12px);
     background: #1A446D;
     color: white;
-    padding: 18px;
-    font-size: 1.2rem;
-    border-radius: 16px;
-    border: none;
     text-decoration: none;
-    display: block;
-    width: 100%;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.btn:hover {
-    background: #2D5A89;
-}
-
-/* Acción principal */
-.btn-grande {
-    background: #6C5CE7;
-    padding: 22px;
-    font-size: 1.4rem;
-    border-radius: 18px;
-    border: none;
-    color: white;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16vh;            /* Ocupa buena parte de la pantalla */
+    min-height: 110px;
+    font-size: 1.6rem;
+    border-radius: 22px;
     font-weight: 700;
-    box-shadow: 0 6px 16px rgba(108,92,231,0.4);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.25);
 }
 
-.btn-grande:hover {
-    background: #7D6BFF;
+/* Completo → MÁS BAJO para no mezclarse con el botón volver */
+.btn-completo {
+    flex: 1 1 100%;
+    background: #6C5CE7;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 12vh;            /* 🔥 antes 18vh → AHORA MÁS CHICO */
+    min-height: 80px;        /* altura mínima segura */
+
+    font-size: 1.6rem;
+    border-radius: 22px;
+    font-weight: 700;
+    box-shadow: 0 5px 14px rgba(108,92,231,0.4);
 }
 
-/* Cámara */
+/* Cámara simulada */
 .camara-simulada {
     width: 100%;
-    max-width: 350px;
-    height: 200px;
+    height: 150px;              /* 🔥 antes 220px – ahora más baja */
     background: #E0E0E0;
-    border: 3px dashed #A0A0A0;
-    margin: 20px auto;
-    border-radius: 14px;
+    border: 4px dashed #A0A0A0;
+    margin: 15px auto 20px;     /* menos márgenes */
+    border-radius: 16px;
 }
+
 
 /* Gastos */
 .lista-gastos {
     list-style: none;
     margin-top: 20px;
+    width: 100%;
 }
 
 .lista-gastos li {
     background: white;
-    padding: 15px;
-    font-size: 1.1rem;
-    margin: 10px 0;
-    border-radius: 14px;
+    padding: 18px;
+    font-size: 1.3rem;
+    margin: 12px 0;
+    border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: left;
 }
 
-/* Botón volver */
+/* Botón volver (siempre visible abajo) */
 .back {
-    display: inline-block;
-    margin-top: 25px;
-    font-size: 1.1rem;
-    color: #1A446D;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 22px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    font-size: 1.4rem;
+    font-weight: 700;
     text-decoration: none;
-}
-
-.assistant-image {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    height: auto;
-    margin: 20px auto;
+    color: #1A446D;
+    z-index: 999;
 }
