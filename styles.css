@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F2F2F2;
+    color: #333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Títulos */
+.titulo {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1A1A1A;
+}
+
+/* Asistente virtual */
+.asistente-box {
+    margin: 20px auto 25px;
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 350px;
+}
+
+.asistente-box img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.asistente-texto {
+    font-size: 1.2rem;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Menú de botones */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn {
+    background: #1A446D;
+    color: white;
+    padding: 18px;
+    font-size: 1.2rem;
+    border-radius: 16px;
+    border: none;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: #2D5A89;
+}
+
+/* Acción principal */
+.btn-grande {
+    background: #6C5CE7;
+    padding: 22px;
+    font-size: 1.4rem;
+    border-radius: 18px;
+    border: none;
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(108,92,231,0.4);
+}
+
+.btn-grande:hover {
+    background: #7D6BFF;
+}
+
+/* Cámara */
+.camara-simulada {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    background: #E0E0E0;
+    border: 3px dashed #A0A0A0;
+    margin: 20px auto;
+    border-radius: 14px;
+}
+
+/* Gastos */
+.lista-gastos {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-gastos li {
+    background: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* Botón volver */
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #1A446D;
+    text-decoration: none;
+}
+
+.assistant-image {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 20px auto;
+}
